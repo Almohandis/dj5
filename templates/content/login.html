@@ -1,0 +1,9 @@
+{% extends 'content/base.html' %}
+{% block body_block %}
+  <h1>please login</h1>
+  <form action="{% url 'content:user_login' %}" method="POST">
+    {% csrf_token %}username<input type="text" name="username" /><br />
+    password<input type="password" name="password" />
+    <input type="submit" value="login" />
+  </form>
+{% endblock %}
